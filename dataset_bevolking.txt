@@ -1,0 +1,77 @@
+SET            DECIMAL = DOT.
+TITLE          "Regionale kerncijfers Nederland".
+DATA LIST      RECORDS = 2
+ /1            Key0         1 -    6 (A)
+               Key1         8 -   15 (A)
+               Key2        17 -   24
+               Key3        26 -   31
+               Key4        33 -   38
+               Key5        40 -   45
+               Key6        47 -   53
+               Key7        55 -   61
+               Key8        63 -   69
+               Key9        71 -   77
+ /2            Key10        1 -    7
+               Key11        9 -   14.
+
+BEGIN DATA
+NL01   2016JJ00 16979120 876854 930038 992880 1018727 1065946 4217738 4791629 
+2336560 748748
+PV20   2016JJ00   583721  26637  28343  30701   36820   52753  141503  159560 
+  81097  26307
+PV21   2016JJ00   646040  32133  36342  40275   40739   36924  145530  185230 
+  98010  30857
+PV22   2016JJ00   488629  22437  26421  30328   30054   21906  104486  147792 
+  79163  26042
+PV23   2016JJ00  1144280  61026  67476  73437   72460   69446  277376  315854 
+ 156334  50871
+PV24   2016JJ00   404068  24709  26955  28363   27615   25002  106555  114784 
+  39824  10261
+PV25   2016JJ00  2035351 101500 111828 124986  128900  126032  470596  587919 
+ 290913  92677
+PV26   2016JJ00  1273613  73375  76677  78655   76508   85724  339074  341112 
+ 153156  49332
+PV27   2016JJ00  2784854 147474 151586 156558  155590  173914  754349  770154 
+ 361396 113833
+PV28   2016JJ00  3622303 201614 203301 207071  213280  237895  947886  986146 
+ 468228 156882
+PV29   2016JJ00   381252  18548  19733  22161   22705   19351   83644  110643 
+  62953  21514
+PV30   2016JJ00  2498749 122145 131901 143727  150772  151140  602466  724080 
+ 361130 111388
+PV31   2016JJ00  1116260  45256  49475  56618   63284   65859  244273  348355 
+ 184356  58784
+END DATA.
+VAR LABELS
+               Key0      "Regio's"/
+               Key1      "Perioden"/
+               Key2      "Totale bevolking"/
+               Key3      "Jonger dan 5 jaar"/
+               Key4      "5 tot 10 jaar"/
+               Key5      "10 tot 15 jaar"/
+               Key6      "15 tot 20 jaar"/
+               Key7      "20 tot 25 jaar"/
+               Key8      "25 tot 45 jaar"/
+               Key9      "45 tot 65 jaar"/
+               Key10     "65 tot 80 jaar"/
+               Key11     "80 jaar of ouder".
+
+VALUE LABELS
+               Key0      "NL01  "  "Nederland"
+                         "PV20  "  "Groningen (PV)"
+                         "PV21  "  "Friesland (PV)"
+                         "PV22  "  "Drenthe (PV)"
+                         "PV23  "  "Overijssel (PV)"
+                         "PV24  "  "Flevoland (PV)"
+                         "PV25  "  "Gelderland (PV)"
+                         "PV26  "  "Utrecht (PV)"
+                         "PV27  "  "Noord-Holland (PV)"
+                         "PV28  "  "Zuid-Holland (PV)"
+                         "PV29  "  "Zeeland (PV)"
+                         "PV30  "  "Noord-Brabant (PV)"
+                         "PV31  "  "Limburg (PV)"/
+               Key1      "2016JJ00"  "2016".
+
+LIST           /CASES TO 10.
+
+SAVE           /OUTFILE "Regionale_kerncijfers_Nederland.SAV".

@@ -1,0 +1,141 @@
+/*
+====================
+		GENERAL
+====================
+*/
+
+	* {
+		padding: 0;
+		margin: 0;
+	}
+
+	body {
+		background-color: #F1F1F1;
+		font-family: 'open sans', arial, helvetica, sans-serif;
+		font-weight: 300;
+	}
+
+	h1 {
+		color: #1D797D;
+		font-family: 'open sans', arial, helvetica, sans-serif;
+		font-weight: 300;
+		font-size: 1.5rem;
+		margin: 50px;
+		margin-top: 30px;
+		margin-bottom: 0;
+	}
+
+/*
+====================
+		MAP
+====================
+*/
+
+	.map > .region > text {
+		fill: #FFF;
+		font-size: .75rem;
+		pointer-events: none;
+	}
+
+	.map .region path:hover {
+		fill: rgba(0,0,0,0.85);
+		cursor: pointer;
+	}
+
+/*
+====================
+		MAP LEGEND
+====================
+*/
+
+	svg {
+		font-family: 'open sans', arial, helvetica, sans-serif;
+		font-weight: 300;
+	}
+
+	.map > .x-axis_map > path,
+	.map > .x-axis_map > .tick > line {
+		stroke: none;
+	}
+
+	.map > .x-axis_map > text {
+		font-size: .75rem;
+	}
+
+/*
+====================
+		DONUT
+====================
+*/
+
+	.donut > text {
+		fill: #1D797D;
+		font-size: 1rem;
+	}
+
+	.donut > text:first-child {
+		font-weight: 600;
+	}
+
+	.donut > .arc > text {
+		fill: #FFF;
+		font-size: .75rem;
+	}
+
+/*
+====================
+		DONUT LEGEND
+====================
+*/
+
+	.donut > #donut_legend > text {
+		fill: #1D797D;
+		font-size: 1rem;
+	}
+
+	.donut > #donut_legend > .donut_legend_item > text {
+		font-size: .75rem;
+	}
+
+/*
+====================
+		BAR CHART
+====================
+*/
+
+	.barchart > .axis > path,
+	.barchart > .axis > .tick > line {
+		stroke: none;
+	}
+
+	.barchart > .axis > text,
+	.barchart > .axis > .tick > text {
+		fill: #000;
+		font-family: 'open sans', arial, helvetica, sans-serif;
+		font-size: .75rem;
+	}
+
+/*
+====================
+		TOOLTIP
+====================
+*/
+
+	#tooltip {
+		position: absolute;
+		padding: 1em;
+		background-color: #1D797D;
+		pointer-events: none;
+		color: #fff;
+		font-family: 'open sans', arial, helvetica, sans-serif;
+		font-size: .75rem;
+		font-weight: 300;
+	}
+
+	#tooltip strong {
+		font-weight: 700;
+	}
+
+	#tooltip.hidden {
+	  display: none;
+	}
